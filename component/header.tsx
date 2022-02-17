@@ -13,10 +13,10 @@ function Header({ translator }: HeaderProps): JSX.Element {
   return (
     <div>
       <Link href={router.pathname} locale="en" passHref>
-        <button>{translator("locale.en")}</button>
+        <button>{translator("header.locale.en")}</button>
       </Link>
       <Link href={router.pathname} locale="ko" passHref>
-        <button>{translator("locale.ko")}</button>
+        <button>{translator("header.locale.ko")}</button>
       </Link>
     </div>
   );

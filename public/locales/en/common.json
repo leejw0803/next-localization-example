@@ -1,11 +1,8 @@
 {
-  "title": "next translation test",
-  "test": "this is test page",
-  "locale": {
-    "ko": "Korean",
-    "en": "English"
-  },
-  "to": {
-    "test": "go to test page"
+  "header": {
+    "locale": {
+      "ko": "Korean",
+      "en": "English"
+    }
   }
 }

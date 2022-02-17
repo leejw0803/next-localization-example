@@ -7,16 +7,17 @@ import { getLocale } from "../utils";
 export const getStaticProps = async ({ locale }: { locale: string }) => {
   return {
     props: {
-      ...(await serverSideTranslations(getLocale(locale), ["common"])),
+      ...(await serverSideTranslations(getLocale(locale), ["common", "test"])),
     },
   };
 };
 
 const Test: NextPage = () => {
-  const { t } = useTranslation("common");
+  const commonTranslater = useTranslation("common");
+  const { t } = useTranslation("test");
   return (
     <>
-      <Header translator={t} />
+      <Header translator={commonTranslater.t} />
       <div>{t("test")}</div>
     </>
   );
